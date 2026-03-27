@@ -28,20 +28,11 @@ bindkey -v "$(printf '\x7f')" backward-delete-char
 alias fastfetch='fastfetch --logo-type kitty --logo /home/B0LD/Pictures/Stickers_PFP/miku-arch.png --logo-width 35 --logo-height 20 --logo-padding-top 2 --logo-padding-left 3'
 fastfetch
 
-export DRONEDETECTION="/home/B0LD/Documents/Projects/Capstone/DroneDetection/"
-export FIREFOX_CONF="/home/B0LD/.mozilla/firefox/1xz7lcl0.default-release/chrome/"
-export IBADAH="/home/B0LD/Documents/Projects/HorrorGame"
-export ZSH_PLUGINS="/home/B0LD/Documents/Tools/Zsh_Plugins"
-export NVIM_CONF="/home/B0LD/.config/nvim"
-
-alias JETSON="qemu-system-x86_64 \
-  -enable-kvm \
-  -m 10000 \
-  -cpu host \
-  -boot c \
-  -drive file=/home/B0LD/Documents/Projects/Capstone/UbuntuVM/ubuntu.img,format=qcow2 \
-  -device usb-ehci,id=ehci \
-  -device usb-host,bus=ehci.0,vendorid=0x0955,productid=0x7e19"
+export FIREFOX="/home/B0LD/.mozilla/firefox/1xz7lcl0.default-release/chrome/"
+export IBADAH="/home/B0LD/Projects/Ibadah"
+export ZSH_PLUGINS="/home/B0LD/Tools/Zsh_Plugins"
+export NVIM="/home/B0LD/.config/nvim"
+export KITTY="/home/B0LD/.config/kitty"
 
 FG_USER=$RED1
 FG_HOST=$RED3

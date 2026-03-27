@@ -1,0 +1,100 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+	border: none;
+	font-family: "JetBrainsMono Nerd Font";
+	font-size: 17px; 
+}
+
+window#waybar {
+	background: rgba(22, 19, 32, 0.6);
+	padding: 6px 0;
+}
+
+#custom-archicon, #workspaces, #clock, #cpu, #memory, #disk, 
+#temperature, #tray, #pulseaudio, #network {
+	color: @foreground;
+	padding: 8px 15px;
+}
+
+#custom-archicon {
+	margin: 0 0 0 15px;
+	border-radius: 12px 0 0 12px;
+	background: @background;
+	color: @color6;
+}
+
+#workspaces button {
+    color: rgba(255,255,255,0.5);
+    border: none;
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    color: @color6;
+    border: none;
+    text-shadow: 0px 0px 4px @color9, 0px 0px 8px @color9, 0px 0px 16px @color9, 0px 0px 30px @color9;
+}
+
+#workspaces button.empty {
+    color: rgba(255,255,255,0.15);
+    border: none;
+}
+
+#workspaces button.empty.active {
+    color: @color9;
+    border: none;
+    text-shadow: 0px 0px 6px @color9, 0px 0px 12px @color9, 0px 0px 20px @color9;
+}
+
+#cpu {
+	border-radius: 12px 0 0 12px;
+	background: @color1;
+	color: @background;
+}
+
+#memory { background: @color2; color: @background; }
+
+#disk { 
+	border-radius: 0 12px 12px 0;
+	background: @color3; 
+	color: @background; 
+}
+
+#temperature {
+	border-radius: 0 12px 12px 0;
+	background: @color4;
+	color: @background;
+}
+
+#clock {
+	background: @color2;
+	color: @background;
+	border-radius: 12px;
+	font-size: 18px;
+}
+
+#tray {
+	margin: 0 0 0 15px;
+	border-radius: 12px 0 0 12px; 
+	background: @color1;
+	color: @background;
+	min-width: 20px; 
+}
+
+#pulseaudio {
+	background: @color5;
+	color: @background;
+}
+
+.modules-right > widget:first-child #pulseaudio {
+	margin-left: 15px;
+	border-radius: 12px 0 0 12px;
+}
+
+#network {
+	margin: 0 10px 0 0;
+	border-radius: 0 12px 12px 0;
+	background: @color6;
+	color: @background;
+}

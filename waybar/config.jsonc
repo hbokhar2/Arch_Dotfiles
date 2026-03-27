@@ -1,0 +1,142 @@
+{
+	"layer": "top",
+	"position": "top",
+	"autohide": true,
+	"autohide-blocked": false,
+	"exclusive": true,
+	"passthrough": false,
+	"gtk-layer-shell": true,
+
+	"modules-left": [
+		"custom/archicon",
+		"hyprland/workspaces",
+		"cpu",
+		"memory",
+		"disk",
+		"temperature"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"tray",
+		"pulseaudio",
+		"network"
+	],
+
+	"custom/archicon": {
+		"format": "",
+		"on-click": "wofi --show drun",
+		"tooltip": false
+	},
+	"clock": {
+		"format": "{:%I:%M %p | %a %d %b}", 
+		"tooltip-format": "<span size='20pt' font='JetBrains Mono Nerd Font'><tt>{calendar}</tt></span>",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col": 3,
+			"on-scroll": 1,
+			"on-click-right": "mode_toggle",
+			"format": {
+				"months":     "<span color='#ffffff'><b>{}</b></span>",
+				"days":       "<span color='#cccccc'><b>{}</b></span>",
+				"weeks":      "<span color='#555555'><i>W{}</i></span>",
+				"weekdays":   "<span color='#888888'><b>{}</b></span>",
+				"today":      "<span color='#ffffff'><b><u>{}</u></b></span>"
+			},
+			"actions": {
+				"on-click": "shift_up",
+				"on-click-right": "shift_down"
+			}
+		},
+		"actions": {
+			"on-click": "shift_up",
+			"on-click-right": "shift_down"
+		}
+	},
+	"cpu": {
+		"format": "{usage}% ",
+		"tooltip": true,
+		"tooltip-format": "CPU Usage: {usage}%\nNúcleos: {cores}"
+	},
+	"memory": {
+		"format": "{}% 󰍛",
+		"tooltip": true,
+		"tooltip-format": "RAM Uage: {used} / {total} ({percentage}%)"
+	},
+	"disk": {
+		"format": "{percentage_free}% ",
+		"tooltip": true,
+		"tooltip-format": "Disk Space Used: {used} / {total} ({percentage_used}%)"
+	},
+	"temperature": {
+		"format": "{temperatureC}°C {icon}",
+		"tooltip": true,
+		"tooltip-format": "Temperatura actual: {temperatureC}°C\nCrítico si > 80°C",
+		"format-icons": [
+			""
+		]
+	},
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": "",
+			"active": "",
+			"urgent": ""
+		},
+		"persistent-workspaces": {
+			"DP-3": [1, 2, 3],
+			"DP-4": [4, 5, 6]
+		},
+		"disable-scroll": true,
+		"all-outputs": false,
+		"show-special": true,
+		"active-only": false,
+		"on-click": "activate"
+	},
+
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"pulseaudio/slider": {
+		"format": "{volume}%",
+		"format-muted": " MUTE",
+		"step": 5,
+		"tooltip": false
+	},
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-muted": " {format_source}",
+		"format-icons": {
+			"default": [
+				"",
+				""
+			]
+		}
+	},
+	"network": {
+		"format": "{ifname}",
+		"format-ethernet": "{ifname} 󰈀",
+		"format-disconnected": " ",
+		"tooltip-format": " {ifname} via {gwaddr}",
+		"tooltip-format-ethernet": " {ifname} {ipaddr}/{cidr}",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50
+	},
+	"hyprland/language": {
+		"format": "{} ",
+		"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+		"format-es": "ESP",
+		"format-en": "ENG"
+	}
+}
+
